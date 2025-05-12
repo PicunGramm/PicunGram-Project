@@ -38,4 +38,4 @@ async def setup(client):
         time.sleep(5)
         await client.edit_message(event.chat_id, msg.id, result_msg)
 
-    print("Модуль успешно запущен! Введите .ping куда угодно!")
+    print("Модуль запущен!(.ping)")
