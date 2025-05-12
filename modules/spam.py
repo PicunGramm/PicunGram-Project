@@ -65,4 +65,4 @@ async def setup(client):
         time.sleep(3)
         await error_msg.delete()
 
-    print("Модуль был запущен. Введите .spam <кол-во> <текст> для спама.")
+    print("Модуль запущен!(.spam)")
