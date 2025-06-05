@@ -2,7 +2,7 @@ from telethon.sync import TelegramClient
 import asyncio
 from importlib import import_module
 import os
-import time 
+import time
 
 api_id = 26881961
 api_hash = 'f3e8b6c96cbbb02eca435c60318ff338'
@@ -62,12 +62,14 @@ async def load_module(client, module_name):
 
 async def main():
     phone = get_phone_numder()
-    print(f"\033[35mИспользуется номер: {phone}\033[0m")
     
     client = TelegramClient('session', api_id, api_hash)
 
     try:
         await client.start(phone)
+        clear_terminal()
+        print("\033[32m██████╗ ██╗ ██████╗██╗   ██╗███╗   ██╗ ██████╗ ██████╗  █████╗ ███╗   ███╗\n██╔══██╗██║██╔════╝██║   ██║████╗  ██║██╔════╝ ██╔══██╗██╔══██╗████╗ ████║\n██████╔╝██║██║     ██║   ██║██╔██╗ ██║██║  ███╗██████╔╝███████║██╔████╔██║\n██╔═══╝ ██║██║     ██║   ██║██║╚██╗██║██║   ██║██╔══██╗██╔══██║██║╚██╔╝██║\n██║     ██║╚██████╗╚██████╔╝██║ ╚████║╚██████╔╝██║  ██║██║  ██║██║ ╚═╝ ██║\n╚═╝     ╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝\033[0m")
+        print(f"\033[35mИспользуется номер: {phone}\033[0m")
         print("\033[35mАвторизация прошла успешно!!!\033[0m")
 
         module_files = [
