@@ -1,4 +1,5 @@
 apt install python
+apt-get install flac
 pkg install ffmpeg
 pip install requests
 pip install telethon
